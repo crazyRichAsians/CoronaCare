@@ -58,16 +58,19 @@ const styles = StyleSheet.create({
         fontWeight: '300',
         fontSize: 40,
         color: '#FFFFFF',
+        fontFamily: 'Verdana'
         
     },
 
     detailsText: {
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        fontFamily: 'Verdana'
     },
     inputText: {
         fontWeight: '200',
         fontSize: 18,
         color: '#000000',
+        fontFamily: 'Verdana',
         height: 40,
         width: 300,
         backgroundColor: 'rgba(255,255,255,0.7)',

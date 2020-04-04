@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Button} from 'react-native-elements';
 import { Navigation } from 'react-native-navigation';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 export default class Home extends Component {
     constructor(props) {
@@ -20,20 +22,36 @@ export default class Home extends Component {
 
     render() {
         return (
+             
              <View style = {styles.outsideWrapper}>
                 <View style={styles.tempButton}>    
                   <Button 
-                  title = "Capture Temperature"
-                  type = "outline"             
+                  icon={ <Icon name="camera" size={30} color="#316EFF" />}
+                  iconRight
+                  title = "Capture Temperature   "
+                  titleStyle={{fontSize: 22, color: '#316EFF', fontFamily: 'Verdana'}}
+                 type = "outline"
+                 buttonStyle={{
+                   //backgroundColor: "#335AFF",
+                   borderRadius: 10,
+                   height: 100,
+                   width: 300,}}           
                   onPress = {this.changeToCameraScreen.bind(this)}
                   />
                 </View>
 
                 <View style = {styles.tempButton}>
                   <Button 
-                  title = "View Records"
+                  icon={ <Icon name="eye" size={32} color="#316EFF" />}
+                  iconRight
+                  title = "View Records   "
+                  titleStyle={{fontSize: 22, color: '#316EFF', fontFamily: 'Verdana'}}
                   type = "outline"
-                  color = "black"
+                  buttonStyle={{
+                    //backgroundColor: "#335AFF",
+                    borderRadius: 10,
+                    height: 100,
+                    width: 300,}}
                   onPress = {this.changeToCameraScreen.bind(this)}
                   />
                 </View>
@@ -48,6 +66,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: 'white'
+        
     
     },
 
