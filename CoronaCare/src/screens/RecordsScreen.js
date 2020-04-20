@@ -3,34 +3,8 @@ import {View, Text, FlatList, StyleSheet, Image, Dimensions} from 'react-native'
 
 export default class RecordsScreen extends Component {
   constructor(props) {
-    
     super(props);
-
-    // this.array = [{
-    //   title: 'ONE'
-    // },
-    // {
-    //   title: 'TWO'
-    // },
-    // {
-    //   title: 'THREE'
-    // },
-    // {
-    //   title: 'FOUR'
-    // },
-    // {
-    //   title: 'FIVE'
-    // }
-    // ],
-
-    // this.state = {
-    //   arrayHolder: [],
-    // }
   }
-
-  // componentDidMount() {
-  //   this.setState({ arrayHolder: [...this.array] })
-  // }
 
   render() {
     const DATA = [
