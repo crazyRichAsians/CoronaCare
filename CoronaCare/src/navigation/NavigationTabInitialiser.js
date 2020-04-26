@@ -18,6 +18,7 @@ const NavigationTabInitialiser = () => {
                   },
                 }],
                 options: {
+                    topBar: { visible: false},
                     bottomTab: {
                         text: 'Capture',
                         icon: require('../assets/images/thermometer.png'),
@@ -33,6 +34,7 @@ const NavigationTabInitialiser = () => {
                 text: 'This is tab 1',
               },
               options: {
+                topBar: { visible: false},
                 bottomTab: {
                   text: 'Records',
                   icon: require('../assets/images/thermometer.png'),
@@ -48,6 +50,7 @@ const NavigationTabInitialiser = () => {
                 text: 'This is tab 1',
               },
               options: {
+                topBar: { visible: false},
                 bottomTab: {
                   text: 'Records',
                   icon: require('../assets/images/thermometer.png'),

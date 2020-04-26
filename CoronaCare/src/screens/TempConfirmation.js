@@ -15,7 +15,7 @@ export default class LoginScreen extends Component {
                     placeholder="Insert Temperature"
                     autoCapitalize="none"
                 />
-                <Text style={{textAlignVertical: "center", fontSize: 25, paddingLeft:8, color:"white" }}>°C</Text>
+                <Text style={{textAlignVertical: "center", fontSize: 25, paddingLeft:8, color:"white"}}>°C</Text>
                 </View>
                     <Button title = "Confirm"></Button>
 
