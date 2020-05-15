@@ -35,7 +35,16 @@ export default TempConfirmation =(props) => {
         }
 
         const uploadPortal = () => {
-            return
+            Navigation.push('AFTERLOGIN_STACK', {
+                component: {
+                    name: "navigation.CoronaCare.WebViewScreen",
+                    options: {
+                        topBar: {
+                            visible: true
+                        }
+                    }
+                }
+            })
         } 
          
         return (
