@@ -17,7 +17,6 @@ const InputField = (props) => {
     <Input
       placeholder={props.placeholder}
       containerStyle={styles.inputContainerStyle}
-      secureTextEntry={true}
       autoCapitalize={false}
       onChangeText={(email) => props.setNewValue(email)}
       leftIcon={{type: 'font-awesome', name: 'user'}}
@@ -26,6 +25,19 @@ const InputField = (props) => {
     />
   );
 };
+
+forgotPassword = (inputEmail) => {
+    auth()
+        .sendPasswordResetEmail(inputEmail)
+        .then((response) => {
+            alert('Please check your email...')
+            response.json;
+            })
+        .catch((error) => {
+        alert("Email not found");
+      })
+    console.log('My Input Email', inputEmail);
+  }
 
 const ResetPasswordScreen = () => {
   const [inputEmail, setEmail] = useState('');
@@ -45,13 +57,14 @@ const ResetPasswordScreen = () => {
           </Text>
           <InputField
             placeholder={'Email Address'}
-            setNewValue={setEmail}
-            verified={''}
+            setNewValue={(email) => {setEmail(email);
+            console.log(email)}}
           />
           <View style={styles.buttonView}>
             <Button
               buttonStyle={styles.button}
               title={'Submit'}
+              onPress={forgotPassword(inputEmail)}
             />
           </View>
         </KeyboardAvoidingView>
